@@ -80,10 +80,12 @@ public class GameActivity extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         // TODO logic to move the player (remember to check collisions)
+
     }
 
     private void initializeDots() {
         // TODO Create and add dots with random positions
+
     }
 
     /*
