@@ -85,6 +85,7 @@ public class GameActivity extends AppCompatActivity {
 
     private void initializeDots() {
         // TODO Create and add dots with random positions
+        //hi dsjdsdjsn
 
     }
 
