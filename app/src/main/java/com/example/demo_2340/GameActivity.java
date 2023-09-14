@@ -80,12 +80,34 @@ public class GameActivity extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         // TODO logic to move the player (remember to check collisions)
-
+        switch (keyCode){
+            case KeyEvent.KEYCODE_DPAD_LEFT:
+                playerX -= 50;
+                break;
+            case KeyEvent.KEYCODE_DPAD_RIGHT:
+                playerX+=50;
+                break;
+            case KeyEvent.KEYCODE_DPAD_UP:
+                playerY -= 50;
+                break;
+            case KeyEvent.KEYCODE_DPAD_DOWN:
+                playerY +=50;
+                break;
+        }
+        playerView.updatePosition(playerX,playerY);
+        checkCollisions();
+        return true;
     }
 
     private void initializeDots() {
         // TODO Create and add dots with random positions
-
+        for (int i = 0; i < 20; i++){
+            float randomX = random.nextFloat() * screenWidth;
+            float randomY = random.nextFloat() * screenHeight;
+            int radius = 50;
+            Dot dot = new Dot(randomX, randomY, radius);
+            dots.add(dot);
+        }
     }
 
     /*
