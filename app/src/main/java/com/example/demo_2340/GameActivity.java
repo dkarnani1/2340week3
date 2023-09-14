@@ -136,7 +136,7 @@ public class GameActivity extends AppCompatActivity {
         float randomY = random.nextFloat() * screenHeight;
         int radius = 50;
         Dot dot = new Dot (randomX, randomY, radius);
-        dots.add (dot);
+        dots.add(dot);
         DotView dotView = new DotView(this, dot);
         gameLayout.addView(dotView);
         dotViewMap.put(dot, dotView);
